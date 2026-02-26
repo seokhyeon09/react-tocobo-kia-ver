@@ -1,0 +1,28 @@
+:root {
+    --bg: #fff;
+    --bg2: #F4F4F4;
+    --bg3: #010E18;
+
+    --bder1:#fff;
+
+    --fg: #111;
+    --text:#231f20;
+    --muted: #666;
+    --primary: #DC272D;
+    --secondary: #009BDE;
+    --tertiary: #678c07;
+    --maxw: 128rem;
+    --gutter: 2rem;
+    --p-gradient: linear-gradient(to bottom, #FF7E7E, #DC272D);
+    --s-gradient: linear-gradient(to bottom, #51CAFF, #009BDE);
+    --t-gradient: linear-gradient(to bottom, #678c07, #8ca843);
+    --h-gradient: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+
+    --main-slider-tit: #fff;
+    --main-slider-sub: #fff;
+}
+
+$bp-lg: 1280px;
+$bp-md: 992px;
+$bp-sm: 768px;
+$bp-xs: 480px;

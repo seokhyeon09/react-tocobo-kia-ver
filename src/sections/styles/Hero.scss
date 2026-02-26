@@ -1,0 +1,41 @@
+.hero-container{
+    height: 90rem;
+    .hero-slider{
+        height: 100%;
+        .hero-slide{
+            background-size: cover ;
+            background-repeat: no-repeat;
+            background-position: center;
+            .inner{
+                height: 100%;
+                position: relative;
+                .t-wrap{
+                    position: absolute;
+                    top: 60%;
+                    transform: translateY(-50%);
+                    left: 0;
+                    h2{
+                        color: var(--main-slider-tit);
+                        font-size: 7.27rem;
+                    }
+                    p{
+                        color: var(--main-slider-sub);
+                        font-size: 2.1rem;  
+                    }
+                    a{
+                        color: var(--main-slider-sub);
+                        font-size: 1.6rem;
+                        background-color: var(--bg3);
+                        display: block;
+                        width: 18rem;
+                        height: 5rem;
+                        text-align: center;
+                        align-content: center;
+                        border: 1px solid var(--bder1);
+                        border-radius: 99px;
+                    }
+                }
+            }
+        }
+    }
+}
