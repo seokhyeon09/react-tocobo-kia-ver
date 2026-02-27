@@ -9,7 +9,7 @@ import { Autoplay } from 'swiper/modules';
 import { headerData } from '../util/header';
 
 const TopBanner = () => {
-    const banner = headerData.topBanner;
+    const banner = headerData.topBanner.items;
     return (
         <div className='topBanner'>
             <Swiper
@@ -27,6 +27,9 @@ const TopBanner = () => {
                     </SwiperSlide>
                 ))}
             </Swiper>
+            <div className="closeBtn">
+                <img src={headerData.topBanner.closeBtn.img} alt={headerData.topBanner.closeBtn.alt} />
+            </div>
         </div>
     )
 }
