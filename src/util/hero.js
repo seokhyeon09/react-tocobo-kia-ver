@@ -23,7 +23,7 @@ export const heroSlides = [
     },
     {
         id:'hero-3',
-        title:'기아 플래그십 스토어',
+        title:'기아 플래그십 스토어 원주점',
         subtxt:'1:1 스케일의 차량 시뮬레이션,인공지능 서비스 로봇 DAL-e 기아가 상상하는 우리의 내일을 입체적으로 느낄 수 있습니다.',
         ctaTxt: "자세히보기",
         ctaHref: "/",

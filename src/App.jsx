@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import './styles/main.scss'
-import Hero from './sections/hero'
+import Hero from './sections/Hero'
+import Header from './components/Header'
 
 function App() {
 
   return (
-    <Hero/>
+    <div>
+      <Header/>
+      <Hero/>
+    </div>
   )
 }
 

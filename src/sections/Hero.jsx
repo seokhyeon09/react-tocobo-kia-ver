@@ -38,8 +38,14 @@ const Hero = () => {
               </div>
             </div>
 
+
           </SwiperSlide>
         ))}
+        <div className='hero-nav'>
+          <div className='arr-prev'>prev</div>
+          <div className='swiper-pagination'></div>
+          <div className='arr-next'>next</div>
+        </div>
       </Swiper>
     </div>
   )
