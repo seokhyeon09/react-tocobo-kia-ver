@@ -25,7 +25,7 @@ export const headerData = {
         },
     },
     logo: {
-        img: img('KIA.svg'),
+        src: img('KIA.svg'),
         alt: 'KIA',
         href: '/',
     },

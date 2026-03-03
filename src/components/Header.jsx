@@ -1,11 +1,19 @@
 import React from 'react'
 import './styles/Header.scss'
+import { headerData } from '../util/header'
+import Nav from './Nav'
+import Util from './Util'
 
 const Header = () => {
+  const headerLogo = headerData.logo
   return (
     <header>
     <div className='inner'>
-        header
+        <Nav/>
+        <h1 className='tit'>
+          <a href={headerLogo.href}><img src={headerLogo.src} alt={headerLogo.alt}/></a>
+        </h1>
+        <Util/>
     </div>
     </header>
   )

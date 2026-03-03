@@ -8,10 +8,10 @@ import { Autoplay } from 'swiper/modules';
 
 import { headerData } from '../util/header';
 
-const TopBanner = () => {
+const TopBanner = ({onClick}) => {
     const banner = headerData.topBanner.items;
     return (
-        <div className='topBanner'>
+        <div className='TopBanner'>
             <Swiper
                 pagination={{
                     clickable: true,
@@ -27,7 +27,7 @@ const TopBanner = () => {
                     </SwiperSlide>
                 ))}
             </Swiper>
-            <div className="closeBtn">
+            <div className="closeBtn" onClick={onClick}>
                 <img src={headerData.topBanner.closeBtn.img} alt={headerData.topBanner.closeBtn.alt} />
             </div>
         </div>
