@@ -1,0 +1,30 @@
+body{
+    background-color: #f3f3f3;
+}
+.inner{
+    margin: 0 10rem;
+}
+.section,
+header,
+footer {
+    .inner {
+        max-width: var(--maxw);
+        // margin: auto;
+        position: relative;
+        height: 100%;
+    }
+}
+.app-container{
+    &.up{
+        .TopBanner{
+            top: -110%;
+        }
+        header {
+            top: 0;
+        }
+
+        #hero {
+            margin-top: 0;
+        }
+    }
+}

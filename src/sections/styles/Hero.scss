@@ -1,0 +1,114 @@
+.hero-container {
+    height: 90rem;
+
+    .hero-slider {
+        height: 100%;
+
+        .hero-slide {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            .inner {
+                height: 100%;
+                position: relative;
+                .t-wrap {
+                    font-family: 'Circular Std';
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4rem;
+                    max-width: 60rem;
+
+                    h2 {
+                        line-height : 85px;
+                        color: var(--main-slider-tit);
+                        font-size: 7.27rem;
+                        word-spacing:0px
+                    }
+
+                    p {
+                        color: var(--main-slider-sub);
+                        font-size: 2.1rem;
+                    }
+
+                    a {
+                        color: var(--main-slider-sub);
+                        font-size: 1.6rem;
+                        background-color: var(--bg3);
+                        display: block;
+                        width: 18rem;
+                        height: 5rem;
+                        text-align: center;
+                        align-content: center;
+                        border: 1px solid var(--bder1);
+                        border-radius: 99px;
+                    }
+                }
+            }
+        }
+
+    }
+    .hero-nav {
+        // background-color: red;
+        position: absolute;
+        left: 10rem;
+        bottom: 8rem;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        .arr-prev,
+        .arr-next{
+            width: 5rem;
+            height: 1.7rem;
+        
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            font-size: 0;
+        }
+        .arr-prev {
+            background-image: url("/kia-file/arr-prev.svg");
+            
+        }
+        .arr-next {
+            background-image: url("/kia-file/arr-next.svg");
+
+        }
+        .swiper-pagination-fraction{
+            width: 5rem;
+            height: 5rem;
+            position: relative;
+            font-size: 0;
+            color: var(--bg);
+            .swiper-pagination-current{
+                font-size: 2.2rem;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            .swiper-pagination-total{
+                font-size: 2.2rem;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                width: 1px;
+                height: 50px;
+                background-color: var(--bg);
+                left: 10%;
+                top: 40%;
+                transform: rotate(45deg) translate(-50%, -50%);
+            }
+        }
+    }
+}
