@@ -20,7 +20,10 @@
         width: 63rem;
         h2.tit {
             color: var(--primary);
-            margin: 3rem 0 2rem;
+            margin: rem 0 2rem;
+        }
+        p.txt-1{
+            color: var(--muted);
         }
     }
 }
