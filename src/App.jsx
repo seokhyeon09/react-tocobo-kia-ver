@@ -24,7 +24,6 @@ function App() {
         <section id='instargram' className='section'><Instargram /></section> */}
         {/* <section id='review' className='section'><Review /></section> */}
       </main>
-      <Brand/>
     </div>
   )
 }

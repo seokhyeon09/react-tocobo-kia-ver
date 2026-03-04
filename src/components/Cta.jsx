@@ -1,5 +1,6 @@
 import React from 'react'
 import { categories } from '../util/cta'
+import './styles/Cta.scss'
 const Cta = () => {
     return (
         <div className='cta inner'>
