@@ -55,7 +55,7 @@
 
         .img-wrap {
             width: 36rem;
-            height: 36rem;
+            height: 20rem;
             overflow: hidden;
             border-radius: 1rem;
             background-color: var(--bg);
@@ -109,12 +109,26 @@
 
     .prev {
         left: -4.5rem;
-        background-image: url(/img/pd_slide_arrow_prev.svg);
+        -webkit-mask-image: url(/kia-file/pd_slide_arrow_prev.svg);
+        mask-image: url(/kia-file/pd_slide_arrow_prev.svg);
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+
+        background-color: var(--primary);
     }
 
     .next {
-        background-image: url(/img/pd_slide_arrow_next.svg);
-        right: -4.5rem
+        right: -4.5rem;
+        -webkit-mask-image: url(/kia-file/pd_slide_arrow_next.svg);
+        mask-image: url(/kia-file/pd_slide_arrow_next.svg);
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+
+        background-color: var(--primary);
     }
 
 }

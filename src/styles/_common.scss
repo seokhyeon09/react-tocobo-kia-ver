@@ -33,6 +33,11 @@ footer {
         font-size: clamp(1.6rem, 1.8vw, 2rem);
         line-height: 1.2;
     }
+    p.txt-1 {
+        font-size: clamp(1rem, 1.5vw, 2rem);
+        line-height: 1.2;
+    }
+
 
     a.btn {
         display: inline-block;
