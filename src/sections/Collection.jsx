@@ -66,6 +66,12 @@ const Collection = () => {
               <div className="img-wrap">
                 <img src={sl.image} alt={sl.name} />
               </div>
+              {sl.details_tit.map((detail, idx) => (
+                <div className="detail-wrap">
+                  <p className='detail-tit'>{detail}</p>
+                  <p className='detail-sub'>{sl.details_sub[idx]}</p>
+                </div>
+              ))}
             </a>
           </SwiperSlide>
         ))}

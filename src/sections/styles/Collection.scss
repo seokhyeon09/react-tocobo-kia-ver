@@ -55,7 +55,7 @@
 
         .img-wrap {
             width: 36rem;
-            height: 20rem;
+            // height: 20rem;
             overflow: hidden;
             border-radius: 1rem;
             background-color: var(--bg);
@@ -74,7 +74,12 @@
                 height: clamp(25rem, 26vw, 30rem);
             }
         }
-
+        .detail-wrap{
+            width: 85%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
 
         .swiper-pagination {
             position: static;
