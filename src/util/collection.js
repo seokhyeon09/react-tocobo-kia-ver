@@ -73,7 +73,7 @@ export const collectionData = [
       ],
       details_sub:[
         '1등급',
-        'i',
+        '',
         '94.10 점',
         '1,598 cc'
       ],

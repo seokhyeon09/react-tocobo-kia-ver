@@ -55,7 +55,7 @@
 
         .img-wrap {
             width: 36rem;
-            // height: 20rem;
+            height: 20rem;
             overflow: hidden;
             border-radius: 1rem;
             background-color: var(--bg);
@@ -79,6 +79,16 @@
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
+            margin-top: 1rem;
+
+            .detail-tit{
+                color: var(--primary);
+                font-size: 2rem;
+            }
+            .detail-sub{
+                color: var(--muted);
+                font-size: 1.6rem;
+            }
         }
 
         .swiper-pagination {
@@ -97,6 +107,7 @@
                 background-color: var(--secondary);
             }
         }
+
     }
 
     .prev,
