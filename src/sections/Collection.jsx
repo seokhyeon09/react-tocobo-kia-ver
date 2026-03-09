@@ -66,12 +66,15 @@ const Collection = () => {
               <div className="img-wrap">
                 <img src={sl.image} alt={sl.name} />
               </div>
-              {sl.details_tit.map((detail, idx) => (
-                <div className="detail-wrap">
-                  <p className='detail-tit'>{detail}</p>
-                  <p className='detail-sub'>{sl.details_sub[idx]}</p>
-                </div>
-              ))}
+                <ul className="detail-list">
+                  {sl.details_tit.map((detail, idx) => (
+                    <li key={idx} className='detail-item'>
+                      <p className='detail-tit'>{detail}</p>
+                      <p className='detail-sub'>{sl.details_sub[idx]}</p>
+                    </li>
+                  ))}
+
+                </ul>
             </a>
           </SwiperSlide>
         ))}

@@ -5,6 +5,7 @@ import Header from './components/Header'
 import TopBanner from './components/TopBanner'
 import Brand from './sections/Brand'
 import Collection from './sections/Collection'
+import WhyKia from './sections/WhyKia'
 
 function App() {
   const [topBanner, setTopBanner] = useState('')
@@ -29,8 +30,8 @@ function App() {
         <section id='hero' className='section'><Hero /></section>
         <section id='brand' className='section'><Brand /></section>
         <section id='collection' className='section'><Collection /></section>
-        {/* <section id='skincare' className='section'><SkinCare /></section>
-        <section id='instargram' className='section'><Instargram /></section> */}
+        <section id='whykia' className='section'><WhyKia /></section>
+        {/* <section id='instargram' className='section'><Instargram /></section> */}
         {/* <section id='review' className='section'><Review /></section> */}
       </main>
     </div>
