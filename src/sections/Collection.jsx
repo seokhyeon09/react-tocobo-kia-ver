@@ -1,0 +1,94 @@
+import React, { useRef, useEffect } from 'react'
+import { collectionData } from '../util/collection'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Navigation, Pagination } from 'swiper/modules';
+import { Scrollbar } from 'swiper/modules';
+import './styles/Collection.scss'
+
+const Collection = () => {
+
+  const prevRef = useRef(null)
+  const nextRef = useRef(null)
+  const swiperRef = useRef(null)
+
+  useEffect(() => {
+    if (swiperRef.current &&
+      swiperRef.current.params &&
+      prevRef.current &&
+      nextRef.current
+    ) {
+      swiperRef.current.params.navigation.prevEl = prevRef.current
+      swiperRef.current.params.navigation.nextEl = nextRef.current
+
+      swiperRef.current.navigation.destroy()
+      swiperRef.current.navigation.init()
+      swiperRef.current.navigation.update()
+    }
+  }, [])
+
+  return (
+    <div className='inner collection-inner'>
+      <div className="t-wrap">
+        <h2 className="tit">
+          Best KIA
+        </h2>
+        <p className='txt'>
+          Shop By Category
+        </p>
+      </div>
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        loop={true}
+        pagination={{
+          type: 'progressbar'
+        }}
+        modules={[Pagination, Navigation]}
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
+        className="collection-slider"
+      >
+        {collectionData.map((sl, i) => (
+          <SwiperSlide key={i}>
+            <a href="#">
+              <div className="info-wrap">
+                <div className="info-tit">
+                  {sl.title}
+                </div>
+                <div className="name">
+                  {sl.name}
+                </div>
+                <div className="k-name">
+                  {sl.kname}
+                </div>
+              </div>
+              <div className="img-wrap">
+                <img src={sl.image} alt={sl.name} />
+              </div>
+                <ul className="detail-list">
+                  {sl.details_tit.map((detail, idx) => (
+                    <li key={idx} className='detail-item'>
+                      <p className='detail-tit'>{detail}</p>
+                      <p className='detail-sub'>{sl.details_sub[idx]}</p>
+                    </li>
+                  ))}
+
+                </ul>
+            </a>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <a href="#"
+        className='prev'
+        onClick={(e) => e.preventDefault()}
+        ref={prevRef}></a>
+      <a href="#"
+        className='next'
+        onClick={(e) => e.preventDefault()}
+        ref={nextRef}></a>
+    </div>
+  )
+}
+
+export default Collection

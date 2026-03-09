@@ -8,7 +8,7 @@ const Util = () => {
             {headerUtil.map((u) => (
                 <li key={u.id}>
                     <a href={u.href}>
-                        <img src={u.icon} alt="" />
+                        <img src={u.icon} alt="icon" />
                     </a>
                 </li>
             ))}

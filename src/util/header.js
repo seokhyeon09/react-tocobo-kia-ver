@@ -33,8 +33,8 @@ export const headerData = {
     header: {
         menu: [
             { id: "brand", label: "brand", href: "#brand" },
-            { id: "shop", label: "shop", href: "#shop" },
-            { id: "promotion", label: "promotion", href: "#promotion" },
+            { id: "collection", label: "collection", href: "#collection" },
+            { id: "whykia", label: "whykia", href: "#whykia" },
             { id: "community", label: "community", href: "#community" },
         ],
         util: [
