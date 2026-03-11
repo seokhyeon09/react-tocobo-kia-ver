@@ -8,26 +8,42 @@ import Collection from './sections/Collection'
 import WhyKia from './sections/WhyKia'
 import Instargram from './sections/Instargram'
 import Footer from './components/Footer'
+import FixedTopBtn from './components/FixedTopBtn'
 
 function App() {
   const [topBanner, setTopBanner] = useState('')
-  const [isScrolled, setIsScrolled]=useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
-  const onClickCloseBtn=()=>{
+
+  const [mNavOpen, setMNavOpen] = useState(false)
+
+  const handleMNavOpen = () => setMNavOpen(true)
+  const handleMNavClose = () => setMNavOpen(false)
+
+  useEffect(() => {
+    document.body.style.overflow = mNavOpen ? 'hidden' : ''
+  }, [mNavOpen])
+  
+  const onClickCloseBtn = () => {
     setTopBanner('up')
   }
 
-  useEffect(()=>{
-    const handleScroll = () =>{
+  useEffect(() => {
+    const handleScroll = () => {
       const scrollTop = window.scrollY
-      setIsScrolled(scrollTop>100)
+      setIsScrolled(scrollTop > 100)
     }
-    window.addEventListener('scroll',handleScroll)
-  },[])
+    window.addEventListener('scroll', handleScroll)
+  }, [])
   return (
-    <div className= {`app-container ${topBanner} ${isScrolled? 'scrolled':''}`}>
-      <TopBanner onClick ={onClickCloseBtn}/>
-      <Header/>
+    <div className={`app-container ${topBanner} ${isScrolled ? 'scrolled' : ''}`}>
+      <FixedTopBtn />
+      <TopBanner onClick={onClickCloseBtn} />
+      <Header
+        mNavOpen={mNavOpen}
+        onNavOpen={handleMNavOpen}
+        onNavClose={handleMNavClose}
+      />
       <main>
         <section id='hero' className='section'><Hero /></section>
         <section id='brand' className='section'><Brand /></section>
@@ -35,7 +51,7 @@ function App() {
         <section id='whykia' className='section'><WhyKia /></section>
         <section id='instargram' className='section'><Instargram /></section>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   )
 }

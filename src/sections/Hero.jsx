@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './styles/Hero.scss'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -9,6 +9,18 @@ import { Pagination, Navigation } from 'swiper/modules';
 
 import { heroSlides } from '../util/hero';
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(
+    window.innerWidth <= 1111
+  )
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 1111)
+
+    window.addEventListener('resize', handleResize)
+
+    return () => window.removeEventListener('resize', handleResize)
+
+  }, [])
+
   return (
     <div className='hero-container'>
       <Swiper
@@ -27,7 +39,7 @@ const Hero = () => {
         {heroSlides.map((slider) => (
           <SwiperSlide
             key={slider.id}
-            style={{ backgroundImage: `url(${slider.image.desk})` }}
+            style={{ backgroundImage: `url(${isMobile? slider.image.mobile : slider.image.desk})` }}
             className='hero-slide'
           >
             <div className="inner">
