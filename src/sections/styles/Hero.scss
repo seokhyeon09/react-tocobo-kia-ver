@@ -48,6 +48,17 @@
                         border-radius: 99px;
                         
                     }
+
+                    @media screen and (max-width : 1111px) {
+                        top:70%;
+                        gap: 1rem;
+                        h2{
+                            font-size: 5rem;
+                        }
+                        p{
+                            font-size: 2rem;
+                        }
+                    }
                 }
             }
         }

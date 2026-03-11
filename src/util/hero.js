@@ -9,6 +9,7 @@ export const heroSlides = [
         ctaHref: "/",
         image:{
             desk:img('main-img1.png'),
+            mobile:img('m-main-img1.png')
         }
     },
     {
@@ -19,6 +20,7 @@ export const heroSlides = [
         ctaHref: "/",
         image:{
             desk:img('main-img2.png'),
+            mobile:img('m-main-img2.png')
         }
     },
     {
@@ -29,6 +31,7 @@ export const heroSlides = [
         ctaHref: "/",
         image:{
             desk:img('main-img3.png'),
+            mobile:img('m-main-img3.png')
         }
     },
 ]

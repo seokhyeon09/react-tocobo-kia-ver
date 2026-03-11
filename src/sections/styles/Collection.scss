@@ -55,7 +55,7 @@
 
         .img-wrap {
             width: 36rem;
-            height: 20rem;
+            height: 100%;
             overflow: hidden;
             border-radius: 1rem;
             background-color: var(--bg);
@@ -71,7 +71,6 @@
 
             @media screen and (max-width:1280px) {
                 width: clamp(25rem, 26vw, 30rem);
-                height: clamp(25rem, 26vw, 30rem);
             }
         }
 
