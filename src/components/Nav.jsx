@@ -1,14 +1,20 @@
 import React from 'react'
 import { headerData } from '../util/header'
+import { useSmoothScroll } from '../hooks/useSmoothScroll'
 
 const Nav = () => {
     const haderNav = headerData.header.menu
+    const scrollTo = useSmoothScroll()
     return (
         <ul className='nav-list'>
             {haderNav.map((nav) => (
                 <li key={nav.id}>
                     <a
                         href={`${nav.href}`}
+                        onClick={(e)=>{
+                        e.preventDefault()
+                        scrollTo(nav.id)
+                    }}
                     >{nav.label}</a>
                 </li>
             ))}

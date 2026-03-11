@@ -35,7 +35,7 @@ export const headerData = {
             { id: "brand", label: "brand", href: "#brand" },
             { id: "collection", label: "collection", href: "#collection" },
             { id: "whykia", label: "whykia", href: "#whykia" },
-            { id: "community", label: "community", href: "#instargram" },
+            { id: "instargram", label: "instargram", href: "#instargram" },
         ],
         util: [
             { id: "language", label: "language", icon: img("icon_language_w.svg"), href: "#" },

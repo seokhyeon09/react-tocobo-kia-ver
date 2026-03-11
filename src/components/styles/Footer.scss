@@ -69,12 +69,9 @@ footer {
 
             .cus-wrap {
                 @media screen and (max-width:1111px) {
-                    border-top: .1rem solid var(--line);
-                    border-bottom: .1rem solid var(--line);
+                    border-top: .1rem solid var(--primary);
+                    border-bottom: .1rem solid var(--primary);
                     padding: 1.5rem 0;
-
-
-
                 }
 
                 .cs-box a {
