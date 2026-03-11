@@ -7,6 +7,7 @@ import Brand from './sections/Brand'
 import Collection from './sections/Collection'
 import WhyKia from './sections/WhyKia'
 import Instargram from './sections/Instargram'
+import Footer from './components/Footer'
 
 function App() {
   const [topBanner, setTopBanner] = useState('')
@@ -33,8 +34,8 @@ function App() {
         <section id='collection' className='section'><Collection /></section>
         <section id='whykia' className='section'><WhyKia /></section>
         <section id='instargram' className='section'><Instargram /></section>
-        {/* <section id='review' className='section'><Review /></section> */}
       </main>
+      <Footer/>
     </div>
   )
 }
