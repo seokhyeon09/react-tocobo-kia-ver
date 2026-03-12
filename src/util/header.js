@@ -27,7 +27,8 @@ export const headerData = {
     logo: {
         src: img('KIA.svg'),
         alt: 'KIA',
-        href: '/',
+        href: '#hero',
+        id:'hero'
     },
 
     header: {
