@@ -168,7 +168,7 @@ footer {
             p {
                 color: var(--primary);
                 font-size: 1.2rem;
-                padding: 3rem 0 6rem;
+                padding: 3rem 0 3rem;
             }
 
             .legal-links a {
@@ -181,6 +181,14 @@ footer {
         .sns-links{
             display: flex;
             gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .mob-only{
+            display: none;
+            @media screen and (max-width:1111px) {
+                display: block;
+            }
         }
     }
 }
