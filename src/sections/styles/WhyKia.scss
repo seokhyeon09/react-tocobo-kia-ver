@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    gap: clamp(6rem, 8rem, 10rem);
     @media screen and (max-width:1111px) {
         flex-direction: column;
         gap: 4.4rem;
@@ -17,8 +17,8 @@
         display: flex;
         flex-direction: column;
         gap: 3.2rem;
-
         h2.tit {
+            width: 50rem;
             color: var(--primary);
 
             @media screen and (max-width:1111px) {
@@ -43,63 +43,88 @@
         }
     }
 
-    .slider-wrap {
-        width: 75rem;
-        height: 53rem;
-        // background-color: salmon;
-        position: relative;
-        transform: translateX(10rem);
 
-        @media screen and (max-width:1440px) {
-            height: 46rem;
-        }
-
-        @media screen and (max-width:1111px) {
-
-            transform: translateX(0);
-            width: 90vw;
-            height: 40rem;
-        }
-
-        @media screen and (max-width:599px) {
-            height: 30rem;
-        }
-
-        // border: 1px solid #000;
-        .in {
+    .slider-wrap{
+        width: 130rem;
+        height: 40rem;
+        .in{
             
-            position: absolute;
-            width: 250%;
             height: 100%;
-            
-
-            @media screen and (max-width:1440px) {
-                width: 176%;
-            }
-
-            @media screen and (max-width:999px) {
-                width: 200%;
-            }
-
             .whykia-slider {
+                
                 height: 100%;
-
                 .swiper-slide {
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
-                }
 
-                a {
                     display: block;
-                    height: 100%;
-                    font-size: 0;
-                }
 
-                @media screen and (max-width:999px) {
-                    height: 110%;
+                    @media screen and (max-width:1111px) {
+                        transform: translateX(50%);
+                    }
                 }
             }
         }
     }
+
+    // .slider-wrap {
+    //     width: 75rem;
+    //     height: 53rem;
+    //     // background-color: salmon;
+    //     position: relative;
+    //     transform: translateX(10rem);
+
+    //     @media screen and (max-width:1440px) {
+    //         height: 46rem;
+    //     }
+
+    //     @media screen and (max-width:1111px) {
+
+    //         transform: translateX(0);
+    //         width: 90vw;
+    //         height: 40rem;
+    //     }
+
+    //     @media screen and (max-width:599px) {
+    //         height: 30rem;
+    //     }
+
+    //     // border: 1px solid #000;
+    //     .in {
+            
+    //         position: absolute;
+    //         width: 250%;
+    //         height: 100%;
+            
+
+    //         @media screen and (max-width:1440px) {
+    //             width: 176%;
+    //         }
+
+    //         @media screen and (max-width:999px) {
+    //             width: 200%;
+    //         }
+
+    //         .whykia-slider {
+    //             height: 100%;
+
+    //             .swiper-slide {
+    //                 background-position: center;
+    //                 background-repeat: no-repeat;
+    //                 background-size: cover;
+    //             }
+
+    //             a {
+    //                 display: block;
+    //                 height: 100%;
+    //                 font-size: 0;
+    //             }
+
+    //             @media screen and (max-width:999px) {
+    //                 height: 110%;
+    //             }
+    //         }
+    //     }
+    // }
 }

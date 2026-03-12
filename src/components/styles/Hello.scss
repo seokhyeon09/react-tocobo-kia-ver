@@ -2,7 +2,7 @@
     display: flex;
     padding-top: 12rem;
     align-items: center;
-    gap: 11.1rem;
+    gap: clamp(10rem, 8vw, 6rem);
 
     @media screen and (max-width:1111px) {
         flex-direction: column;
@@ -20,7 +20,7 @@
         width: 63rem;
         h2.tit {
             color: var(--primary);
-            margin: rem 0 2rem;
+            margin: 0 2rem;
         }
         p.txt-1{
             color: var(--muted);

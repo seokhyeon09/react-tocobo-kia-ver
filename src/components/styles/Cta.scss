@@ -5,8 +5,10 @@
         text-align: center;
         gap: 2rem;
 
-        @media screen and (max-width:1111px) {
+        @media screen and (max-width:980px) {
             flex-wrap: wrap;
+            width: 50rem;
+            margin: 0 auto;
         }
 
         .img-wrap {

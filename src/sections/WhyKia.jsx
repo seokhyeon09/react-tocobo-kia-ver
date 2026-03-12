@@ -31,9 +31,7 @@ const WhyKia = () => {
             <SwiperSlide 
             style={{backgroundImage:`url(${sl.image})`}}
             key={sl.id} >
-              <a href={sl.link}>
-              {sl.id}
-              </a>
+              <a href={sl.link}></a>
             </SwiperSlide>
             ))}
 
