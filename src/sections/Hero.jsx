@@ -44,8 +44,8 @@ const Hero = () => {
           >
             <div className="inner">
               <div className="t-wrap">
-                <h2>{slider.title}</h2>
-                <p>{slider.subtxt}</p>
+                <h2 dangerouslySetInnerHTML={{__html:slider.title}}></h2>
+                <p dangerouslySetInnerHTML={{__html:slider.subtxt}}></p>
                 <a href={slider.ctaHref}>{slider.ctaTxt}</a>
               </div>
             </div>

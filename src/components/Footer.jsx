@@ -14,20 +14,20 @@ const Footer = () => {
   const [isOpen, setIsOpen] = useState(false)
   const hiddenContentRef = useRef(null)
 
-  useEffect(()=>{
-    const handleResize =()=>{
-      setIsOpen(window.innerWidth>=1111)
+  useEffect(() => {
+    const handleResize = () => {
+      setIsOpen(window.innerWidth >= 1111)
     }
     handleResize()
 
-    window.addEventListener('resize',handleResize)
+    window.addEventListener('resize', handleResize)
 
 
-    return ()=>window.removeEventListener('resize',handleResize)
+    return () => window.removeEventListener('resize', handleResize)
 
 
 
-  },[])
+  }, [])
 
 
   useEffect(() => {
@@ -36,19 +36,19 @@ const Footer = () => {
 
     if (isOpen) {
       el.style.height = `${el.scrollHeight}px`
-      
+
       const onTransitionEnd = () => {
         el.style.height = 'auto'
         el.removeEventListener('transitionend', onTransitionEnd)
       }
       el.addEventListener('transitionEnd', onTransitionEnd)
     } else {
-      
+
       el.style.height = `${el.scrollHeight}px`
 
       void el.offsetHeight
 
-      el.style.height='0px'
+      el.style.height = '0px'
 
     }
 
@@ -60,9 +60,17 @@ const Footer = () => {
       <div className='inner footer-inner'>
         <div className="left">
           <h3>
-            <a href={logoData.href}>
-              <img src={logoData.src} alt={logoData.alt} />
+            <a href={logoData.href} className="logo-link">
+              {/* 이미지를 직접 넣는 대신, 배경색을 입힐 빈 요소를 만듭니다 */}
+              <span
+                className="footer-logo"
+                style={{ '--logo-url': `url(${logoData.src})` }}
+                aria-label={logoData.alt}
+              ></span>
             </a>
+            {/* <a href={logoData.href}>
+              <img src={logoData.src} alt={logoData.alt} />
+            </a> */}
           </h3>
           <ul className="foot-list-1">
             {/* companyData */}
@@ -103,11 +111,12 @@ const Footer = () => {
           </div>
         </div>
         <div className="right">
-          <div 
-          onClick={()=>{
-            if (window.innerWidth >= 1111) return
-            setIsOpen(prevStatus=>!prevStatus)}}
-          className={`cus-wrap ${isOpen ? "open" : ""}`}>
+          <div
+            onClick={() => {
+              if (window.innerWidth >= 1111) return
+              setIsOpen(prevStatus => !prevStatus)
+            }}
+            className={`cus-wrap ${isOpen ? "open" : ""}`}>
             <h4>
               {customerCenterData.title}
               <span className="mob-only m-plus">
