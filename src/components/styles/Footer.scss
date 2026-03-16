@@ -1,6 +1,6 @@
 footer {
     border-top: .1rem solid var(--primary);
-    padding: 7rem 0 5rem;
+    padding: 7rem 3rem 5rem;
 
     .footer-inner {
         display: flex;
@@ -24,8 +24,23 @@ footer {
             }
 
             h3 {
-                margin-bottom: 2rem;
+                margin-bottom: 1rem;
                 width: 200px;
+
+                .footer-logo {
+                    display: inline-block;
+                    width: 12rem;
+                    /* 로고 너비에 맞게 조절 */
+                    height: 7rem;
+                    /* 로고 높이에 맞게 조절 */
+
+                    /* 마스크 설정 */
+                    -webkit-mask: var(--logo-url) no-repeat center / contain;
+                    mask: var(--logo-url) no-repeat center / contain;
+
+                    /* 1. 기본 색상: #010E18 (짙은 남색) */
+                    background-color: #010E18;
+                }
             }
 
             .foot-list-1 li {
@@ -178,14 +193,16 @@ footer {
                 color: #6f6f6f
             }
         }
-        .sns-links{
+
+        .sns-links {
             display: flex;
             gap: 1rem;
             margin-top: 2rem;
         }
 
-        .mob-only{
+        .mob-only {
             display: none;
+
             @media screen and (max-width:1111px) {
                 display: block;
             }

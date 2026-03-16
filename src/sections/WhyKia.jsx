@@ -12,7 +12,7 @@ const WhyKia = () => {
           Why Kia PBV?
         </h2>
         <p className="txt">
-          최초의 전용 PBV 모델인 중형 Kia PV5는차량 호출, 딜리버리, 유틸리티 서비스 등주요 도메인에 적합하며,<br/>
+          최초의 전용 PBV 모델인 중형 Kia PV5는<br/>차량 호출, 딜리버리, 유틸리티 서비스 등주요 도메인에 적합하며,<br/>
           다양한 고객 니즈를 위한컨버전 역량을 갖춘 차량이 될 것입니다.
         </p>
         <a href="#" className="btn">
