@@ -92,6 +92,17 @@
             display: block;
             transform: translateX(5%);
         }
+        @media screen and (max-width:999px) {
+            display: block;
+            width: 90vw;
+            height: 24rem;
+            transform: translateX(0);
+            .in{
+                transform: translateX(0);
+                width: 250%;
+                height: 100%;
+            }
+        }
     }
 
     // .whykia-inner {
