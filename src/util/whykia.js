@@ -19,6 +19,12 @@ const whykia = [
     alt: "자동화 미래",
     link: "/promotion",
   },
+  {
+    id: 4,
+    image: img("sec4-img4.png"),
+    alt: "컨비전",
+    link: "/promotion",
+  },
 ];
 
 

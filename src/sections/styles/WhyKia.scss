@@ -42,12 +42,21 @@
 
         @media screen and (max-width:1111px) {
             align-items: center;
+            gap: 2rem;
+        }
+
+        @media screen and (max-width:999px) {
+            gap: 1.5rem;
+        }
+
+        @media screen and (max-width:599px) {
+            gap: 1rem;
         }
     }
 
 
     .slider-wrap {
-        width: 68rem;
+        width: 100rem;
         height: 44rem;
         // overflow: hidden;
         display: flex;
@@ -79,6 +88,10 @@
             }
         }
 
+        @media screen and (max-width:1111px) {
+            display: block;
+            transform: translateX(5%);
+        }
     }
 
     // .whykia-inner {
