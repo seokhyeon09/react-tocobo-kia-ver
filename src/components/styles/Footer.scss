@@ -2,6 +2,10 @@ footer {
     border-top: .1rem solid var(--primary);
     padding: 7rem 3rem 5rem;
 
+    @media screen and (max-width:1300px) {
+        padding: 2rem 0 3rem;
+    }
+
     .footer-inner {
         display: flex;
         justify-content: space-between;
@@ -11,7 +15,6 @@ footer {
         @media screen and (max-width:1111px) {
             flex-direction: column;
             gap: 3rem;
-
         }
 
         .left {

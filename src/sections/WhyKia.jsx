@@ -22,7 +22,7 @@ const WhyKia = () => {
       <div className="slider-wrap">
         <div className="in">
           <Swiper 
-          slidesPerView={2}
+          slidesPerView={3}
           spaceBetween={30}
           loop={true}
           className="whykia-slider">
