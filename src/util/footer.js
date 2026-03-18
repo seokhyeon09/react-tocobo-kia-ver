@@ -6,23 +6,22 @@ import { RiKakaoTalkFill } from "react-icons/ri";
 // 로고
 export const logoData = {
   src: img("KIA.svg"),
-  alt: "TOCOBO 로고",
+  alt: "기아 로고",
   href: "/",
 };
 
 // 회사 정보
 export const companyData = [
-  "주식회사 픽톤  대표 : 이병훈",
-  "주소 : 03966 서울특별시 마포구 월드컵북로15길 45 (성산동)",
-  "사업자등록번호 : 196-81-02410 [사업자정보확인]",
-  "통신판매업신고 : 제2021-서울마포-2994호 개인정보보호책임자 : 안주영",
-  "TEL : 02-6352-2410  E-MAIL : help@thepicton.com",
-  "마케팅문의 : 마케팅팀 mkt@thepicton.com",
-  "수출문의 : 해외영업팀 sales1@thepicton.com",
-  "특판&대량구매문의 : 국내영업팀 sales@thepicton.com",
+  "사업자 : 기아 주식회사",
+  "대표 : 송호성, 최준영",
+  "사업자등록번호 : 119-81-02316",
+  "주소 : 서울특별시 서초구 헌릉로 12 (양재동)",
+  "영업 : sales_specialvehicle@kia.com",
+  "서비스 : service_specialvehicle@kia.com",
+  "마케팅 : marketing_specialvehicle@kia.com",
 ];
 export const footerLegal = {
-  copyright: "COPYRIGHT© 주식회사 픽톤 2021 TOCOBO. ALL RIGHT RESERVED.",
+  copyright: "© Kia Corp. All rights reserved",
   links: [
     { label: "이용약관", href: "/terms" },
     { label: "개인정보처리방침", href: "/privacy" },
@@ -32,7 +31,7 @@ export const footerLegal = {
 // 고객센터
 export const customerCenterData = {
   title: "Customer Center",
-  tel: { value: "02-6352-2410", href: "tel:0263522410" },
+  tel: { value: "080-200-2000", href: "tel:080-200-2000" },
   hours: "AM 10:00 - PM 5:00 (Lunch 12:00 - 13:00)",
   notice: "토, 일요일 및 공휴일 휴무",
   talk: { label: "1:1 TALK", href: "#" },
