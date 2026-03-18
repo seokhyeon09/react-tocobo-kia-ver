@@ -13,6 +13,11 @@
     .img-wrap {
         border-radius: 2rem;
         overflow: hidden;
+        img{
+            @media screen and (max-width:650px) {
+                width: 44rem;
+            }
+        }
     }
 
     .t-wrap {
