@@ -16,6 +16,11 @@
             width: 40rem;
             margin: 0 auto;
         }
+        @media screen and (max-width:599px) {
+            flex-wrap: wrap;
+            width: 30rem;
+            margin: 0 auto;
+        }
 
         &>li {
             transition: all 0.5s;
