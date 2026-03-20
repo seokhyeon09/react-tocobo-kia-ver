@@ -3,6 +3,7 @@
     justify-content: space-between;
     align-items: center;
     gap: clamp(6rem, 8rem, 10rem);
+    overflow: hidden;
 
     @media screen and (max-width:1111px) {
         flex-direction: column;
@@ -87,7 +88,7 @@
                 transform: translateX(-20%);
             }
         }
-
+        
         @media screen and (max-width:1111px) {
             display: block;
             transform: translateX(5%);
