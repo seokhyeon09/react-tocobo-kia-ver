@@ -1,16 +1,47 @@
-# React + Vite
+# react-tocobo-kia-ver (Kia 웹사이트 리디자인)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+기아(Kia)의 차량 판매 및 브랜드 홍보를 위한 웹사이트를 프론트엔드 관점에서 새롭게 리디자인한 프로젝트입니다. 하드코딩을 지양하고 데이터와 UI를 분리하여 유지보수성을 극대화했으며, 다양한 디바이스에 대응하는 반응형 웹과 부드러운 인터랙션, 소셜 미디어 공유 최적화까지 고려하여 개발했습니다.
 
-Currently, two official plugins are available:
+## Links
+- 배포 주소: https://react-tocobo-kia-ver.vercel.app/
+- GitHub 저장소: https://github.com/seokhyeon09/react-tocobo-kia-ver
+- Figma 디자인: https://www.figma.com/design/qnnTsGU2bDUyLGXx8DBbzP/Kia-SellPage?node-id=0-1&p=f&t=QXfXnzJVJRjcyLd6-0
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack (사용 기술)
+- Framework 및 빌드 도구: React 19, Vite
+- Language: JavaScript
+- Styling: SCSS
+- Libraries: Swiper.js, React Icons
+- SEO: HTML5 Meta Tags
 
-## React Compiler
+## Key Features (주요 기능)
+- 데이터 모듈화 및 컴포넌트 재사용성 극대화: 페이지 내 반복적으로 들어가는 텍스트와 이미지 경로 등을 하드코딩하지 않고, util 폴더 내의 JS 파일로 분리하여 객체화했습니다. JSX 페이지에서는 이 모듈을 불러와 map 함수를 통한 리스트 렌더링을 적용함으로써 코드 중복을 줄이고 데이터 수정 시 관리 효율성을 높였습니다.
+- Swiper 기반 다이내믹 슬라이더 구현: 외부 라이브러리인 Swiper.js를 활용하여 메인 배너(Hero), 추천 상품(Collection), 상단 공지 배너 등 다양한 영역에 매끄러운 슬라이드 애니메이션과 자동 재생(Autoplay) 기능을 적용했습니다.
+- 배포 사전 검증 및 디테일 처리: Vite의 preview 기능을 통해 최종 배포 전 로컬 환경에서 렌더링 상태를 점검했으며, 브랜드 아이덴티티에 맞는 파비콘(Favicon)을 적용해 실제 서비스와 유사하게 구성을 갖췄습니다.
+- 소셜 미디어 웹 서핑 최적화: 카카오톡, 페이스북, 트위터 등 링크를 공유했을 때 사이트의 정보가 시각적으로 신뢰감 있게 전달될 수 있도록 오픈 그래프 및 트위터 카드 메타 태그를 구축해 미리보기를 적용했습니다.
+- 해상도별 텍스트 및 여백 최적화: 화면이 좁아지는 구간마다 폰트 크기와 요소의 여백을 재조정했습니다. 특정 해상도에서는 디스플레이 속성을 제어하여 줄 바꿈 위치를 기기에 맞게 강제함으로써 모바일에서도 가독성이 떨어지지 않도록 처리했습니다.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Troubleshooting (트러블슈팅 및 문제 해결 과정)
 
-## Expanding the ESLint configuration
+### 1. 반응형 레이아웃 대응을 위한 SCSS clamp()와 미디어 쿼리 활용
+- 문제: 데스크탑뿐만 아니라 태블릿과 모바일에도 대응하는 웹사이트를 제작하고자 했습니다. 하지만 기기마다 화면 크기가 다르기 때문에 단순 너비 축소만으로는 글자와 이미지가 겹치거나 원치 않는 부분에서 줄 바꿈이 일어나는 레이아웃 붕괴 현상이 발생했습니다.
+- 해결: 유연한 가변 레이아웃을 구현하기 위해 SCSS에서 clamp() 함수를 적극 도입했습니다. 이를 통해 뷰포트 너비에 따라 글자 크기, 이미지, 요소 간의 간격 등이 최소값과 최대값 사이에서 자연스럽게 유동적으로 조절되도록 만들었습니다. 이에 더해 미디어 쿼리를 세밀하게 분기하여 다양한 스크린 크기에서도 완벽한 가독성과 레이아웃을 유지하도록 보완했습니다.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. 커스텀 훅(useSmoothScroll.js)을 이용한 스크롤 애니메이션 구현
+- 문제: 상단 헤더 메뉴를 통해 페이지 내 각 섹션으로 이동할 때, 화면이 부드럽지 못하고 뚝뚝 끊기듯이 순간이동하는 문제가 발생하여 사용자 경험을 해쳤습니다.
+- 해결: 로직의 분리와 재사용성을 위해 scrollIntoView API를 활용한 useSmoothScroll.js 커스텀 훅을 직접 작성했습니다. 원하는 섹션으로 부드럽게 스크롤되도록 애니메이션 효과를 부여했으며, useCallback을 통해 함수를 메모이제이션하여 불필요한 리렌더링을 방지하고 성능을 최적화했습니다.
+
+## 느낀점 / 개선할 점
+- 느낀점: 단순히 화면을 예쁘게 만드는 것을 넘어, 프론트엔드 아키텍처와 사용자 경험(UX), 그리고 배포 후의 마케팅 측면(SEO)까지 종합적으로 고민해 본 뜻깊은 프로젝트였습니다.
+- 개선할 점: 현재 차량 정보나 배너 텍스트 데이터가 로컬 파일에 정적으로 관리되고 있습니다. 향후 백엔드를 연동하여 관리자가 데이터를 수정하면 웹사이트에 실시간으로 반영되는 동적 데이터 파이프라인을 구축해 보고 싶습니다.
+
+## Getting Started (로컬 실행 방법)
+
+1. 저장소 클론 (Clone the repository)
+git clone https://github.com/seokhyeon09/react-tocobo-kia-ver
+
+2. 패키지 설치 (Install dependencies)
+npm install
+
+3. 개발 서버 실행 (Run the dev server)
+npm run dev
